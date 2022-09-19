@@ -1,0 +1,16 @@
+{
+  "name": "pos",
+  "version": "1.0.0",
+  "description": "Implementation of Proof-of-stake",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "joi": "^17.6.0",
+    "mongoose": "^6.5.4"
+  }
+}
