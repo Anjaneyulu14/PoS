@@ -8,7 +8,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const userRoutes = require("./apis/users/userRoutes")
 
-const dburl = "mongodb://localhost:27017/pos"
+let dburl = ""
+console.log(process.env.MONGO_URL)
+
+if(process.env.MONGO_URL){
+    dburl = process.env.MONGO_URL;
+}
+else{
+    dburl = "mongodb://localhost:27017/pos";
+}
 mongoose.connect(dburl)
     .then((res) => {
         app.listen(3000)
