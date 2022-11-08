@@ -18,3 +18,5 @@ mongoose.connect(dburl)
 // app.listen(3000)
 
 app.use("/user", userRoutes)
+
+module.exports = app;
