@@ -108,6 +108,7 @@ exports.chooseValidator = async (req,res) => {
 exports.getUsers = async (req,res) => {
     try {
         let allUsers = await userModel.find()
+        res.status(200).send({"data":allUsers})
     } catch (error) {
         res.status(400).send({"err":error})
     }
